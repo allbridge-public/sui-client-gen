@@ -65,7 +65,7 @@ jobs:
             ${{ steps.build.outputs.BIN }}
       - name: Publish binaries for ${{ env.version_tag }} release
         if: ${{ env.version_tag != 'main' }}
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.version_tag }}
           files: |
