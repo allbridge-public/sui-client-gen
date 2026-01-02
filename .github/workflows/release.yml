@@ -58,7 +58,7 @@ jobs:
           echo BIN="target/release/sui-client-gen" >> $GITHUB_OUTPUT
       - name: Upload release artifacts
         if: ${{ env.version_tag != 'main' }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: binary
           path: |
