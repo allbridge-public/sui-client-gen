@@ -46,7 +46,7 @@ jobs:
           echo "version_tag=$(echo ${{ env.TAG_NAME }} | sed s/'refs\/tags\/'//)" >> $GITHUB_ENV
       - name: Checking out ${{ env.version_tag }}
         if: ${{ env.version_tag != 'main' }}
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           ref: ${{ env.version_tag }}
 
